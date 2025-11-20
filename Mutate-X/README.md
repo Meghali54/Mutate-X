@@ -1,14 +1,6 @@
 # 🧬 Mutate-X: Variant Effect Predictor with Evo2
 
 <div align="center">
-
-![MutateX](https://img.shields.io/badge/MutateX%20AI-VARIANT%20EFFECT%20PREDICTOR-800080?style=for-the-badge) 
-![FastAPI](https://img.shields.io/badge/FASTAPI-BACKEND-00CC00?style=for-the-badge) 
-![Next.js](https://img.shields.io/badge/NEXT.JS-FRONTEND-000000?style=for-the-badge) 
-![Modal](https://img.shields.io/badge/MODAL-GPU%20CLOUD-007FFF?style=for-the-badge) 
-![Python](https://img.shields.io/badge/PYTHON-3.12-20B2AA?style=for-the-badge) 
-![HackAura](https://img.shields.io/badge/MADE%20FOR-HackAura%20-FFA500?style=for-the-badge)
-
 </div>
 <div align="center">
  Revolutionizing Genetic Analysis with AI
@@ -20,8 +12,6 @@ _An AI-powered platform revolutionizing genetic analysis by predicting the patho
 ---
 
 ## 📑 Table of Contents
-
--   [🌍 Addressing UN Sustainable Development Goals](#-addressing-un-sustainable-development-goals)
 -   [🚨 The Problem](#-the-problem)
 -   [💡 Our Solution](#-our-solution)
 -   [🚀 Features](#-features)
@@ -32,7 +22,6 @@ _An AI-powered platform revolutionizing genetic analysis by predicting the patho
 -   [🏗️ Project Structure](#️-project-structure)
 -   [🔬 Scientific Background](#-scientific-background)
 -   [🙏 Acknowledgments](#-acknowledgments)
--   [⚠️ IMPORTANT DEPLOYMENT NOTICE](#️-important-deployment-notice-️)
 
 ---         |
 
@@ -49,6 +38,17 @@ Every day, millions of people undergo genetic testing, but interpreting DNA muta
 - **🌍 Limited Access:** Advanced genomics restricted to major medical centers
 - **❓ Uncertain Results:** 40-50% of variants classified as "Uncertain Significance"
 - **🔄 Inconsistent Classifications:** Different labs often provide conflicting interpretations
+
+Why this matters
+- Faster clinical decision support for genetic variants
+- Lower cost and broader access to precision genomics
+- Evidence-based, exportable reports for clinical workflows
+
+## Highlights
+- Evo2 LLM trained on large genomic corpora for variant pathogenicity prediction
+- FastAPI backend with Modal serverless GPU inference
+- Next.js frontend with downloadable PDF reports and ClinVar comparison
+- Supports hg19/hg38 and custom assemblies via UCSC APIs
 
 ### Real-World Impact:
 
@@ -97,33 +97,6 @@ Unlike traditional tools that rely on conservation scores or statistical models,
 | **Variant Input Methods**   | Manual entry or curated ClinVar variant selection     | Flexible workflow for different use cases        |
 | **Confidence Scoring**      | Numerical confidence alongside categorical prediction | Risk stratification for clinical decision-making |
 | **PDF Export**              | Comprehensive analysis reports                        | Seamless integration with medical records        |
-
-### 💻 Technical Architecture
-
-```mermaid
-graph TB
-    subgraph "User"
-        A[🌐 Frontend &#124; Next.js]
-    end
-
-    subgraph "Cloud Infrastructure"
-        B[🚀 Backend &#124; FastAPI]
-        C[☁️ GPU Infrastructure &#124; Modal Labs]
-        D[🧠 Evo2 Model &#124; NVIDIA H100]
-        E[UCSC Genome API]
-        F[NCBI ClinVar Database]
-    end
-
-    A -- API Request --> B
-    B -- Inference Job --> C
-    C -- Loads --> D
-    B -- Fetches Data --> E
-    B -- Fetches Data --> F
-    D -- Prediction --> G[✅ Prediction Results]
-    G -- Returns to --> A
-```
-
----
 
 ## 🛠️ Tech Stack
 
@@ -177,9 +150,4 @@ graph TB
 - **🔬 Research Adoption:** 200+ researchers using for variant prioritization
 - **🌍 Global Reach:** Users from 25+ countries across 6 continents
 - **📈 Variant Database:** 50,000+ variants analyzed and validated
-
----
-
-
-<div align="center">
 
